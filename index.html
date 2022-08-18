@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whack-A-Mole!</title>
+    <title>Gotta whack 'em all!</title>
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="30_WhackAMole.css">
+    <link rel="icon" href="diglett2.png">
 </head>
 <body>
-    <h1>Whack-A-Mole! <span class="score">0</span></h1>
-    <button onClick="startGame()">Go!</button>
+    <h1>Gotta whack 'em all! <span class="score">0</span></h1>
+    <button onClick="startGame()">GO!</button>
     <div class="game">
         <div class="hole hole1">
             <div class="mole"></div>
@@ -30,7 +31,28 @@
         <div class="hole hole6">
             <div class="mole"></div>
         </div>
+        <div class="hole hole7">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole8">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole9">
+            <div class="mole"></div>
+        </div>
     </div>
+
+<audio id="BGM" src="107-battle-(vs-wild-pokemon).mp3" preload="auto"></audio>
+
+    <!-- <button onClick="document.getElementById('107-battle-(vs-wild-pokemon).mp3').play();">BGM</button> -->
+
+    <!-- <a href="javascript:play_single_sound();">BGM</a> -->
+
+    <audio controls autoplay loop>
+        <source src="107-battle-(vs-wild-pokemon).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
 <script src="30_WhackAMole.js"></script>
 </body>
 </html>

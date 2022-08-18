@@ -5,6 +5,7 @@ const moles = document.querySelectorAll('.mole');
 let lastHole;
 let timeUp = false;
 let score = 0;
+// let BGM = new Audio('107-battle-(vs-wild-pokemon).mp3')
 
 function randomTime(min, max) {
     return Math.round(Math.random() * (max - min) + min);
@@ -22,7 +23,7 @@ function randomHole(holes) {
 }
 
 function peep() {
-    const time = randomTime(200, 1000);
+    const time = randomTime(700, 1000);
     const hole = randomHole(holes);
     hole.classList.add('up');
     setTimeout(() => {
@@ -46,6 +47,13 @@ function bonk(e) {
     this.classList.remove('up');
     scoreBoard.textContent = score;
     console.log(e);
+}
+
+// BGM.play();
+// BGM.currentTime=0;
+
+function play_single_sound() {
+    document.getElementById('BGM').play();
 }
 
 moles.forEach(mole => mole.addEventListener('click', bonk));

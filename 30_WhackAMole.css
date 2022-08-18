@@ -3,7 +3,7 @@ html {
     /* min-height: 100vh; */
     /* min-width: 100%; */
     font-size: 10px;
-    background: rgb(93, 187, 0);
+    background: rgb(187, 100, 0);
 }
 
 *, *:before, *:after {
@@ -14,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Amatic SC', cursive;
+    cursor: url(hammer.cur),auto;
 }
 
 h1 {
@@ -46,24 +47,34 @@ h1 {
 
 .hole:after {
     display: block;
-    background: url(hole.svg) bottom center no-repeat;
+    background: url('diglettHole.png') bottom center no-repeat;
     background-size: contain;
     content: '';
     width: 100%;
     height: 70px;
     position: absolute;
-    z-index: 2;
-    bottom: -30px;
+    z-index: -5;
+    bottom: -10px;
 }
 
 .mole {
-    background: url('mole.svg') bottom center no-repeat;
+    background: url('diglett.png') bottom center no-repeat;
     background-size: 60%;
     position: absolute;
     top: 100%;
     width: 100%;
-    height: 100%;
-    transition: all 0.4s;
+    height: 105%;
+    /* transition: all 0.4s; */
+}
+
+.mole:after {
+    background: url('diglettMid.png') bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 105%;
+    /* transition: all 0.4s; */
 }
 
 .hole.up .mole {
